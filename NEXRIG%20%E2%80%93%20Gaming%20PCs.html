@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEXRIG – Built for Performance. Priced for Gamers.</title>
+<meta name="description" content="Custom-built, refurbished and affordable gaming PCs plus components.">
+<style>
+:root{--bg:#07080c;--bg2:#0e1018;--fg:#eef1f8;--muted:#98a0b3;--card:#12141d;--border:#232738;--blue:#2e8bff;--purple:#8a4dff;--ok:#2fd49a;--warn:#ffb340;--btnfg:#fff;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#f4f6fb;--bg2:#e9edf6;--fg:#10131c;--muted:#566077;--card:#fff;--border:#d9deea;--blue:#1b6fe0;--purple:#6a33d6;--ok:#0d8a63;--warn:#a86400;color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+a{color:inherit}
+button{font:inherit;cursor:pointer;color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+header .wrap{display:flex;align-items:center;gap:14px;height:62px}
+.logo{font-weight:900;letter-spacing:.12em;font-size:1.2rem;background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;gap:16px;margin-left:auto;font-size:.92rem;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--fg)}
+@media(max-width:700px){nav{display:none}.sp{margin-left:auto}}
+.ib{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 12px}
+.btn{border:0;border-radius:12px;padding:12px 20px;font-weight:700;color:var(--btnfg);background:linear-gradient(90deg,var(--blue),var(--purple));box-shadow:0 0 24px color-mix(in srgb,var(--blue) 35%,transparent)}
+.btn.o{background:transparent;color:var(--fg);border:1px solid var(--border);box-shadow:none}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:56px 0 40px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.1rem,7vw,3.7rem);line-height:1.04;margin:0 0 14px;letter-spacing:-.03em;text-transform:uppercase}
+.hero h1 span{background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);margin:0 0 8px;font-size:1.05rem}
+.slogan{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:22px!important}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.rig{height:300px;display:grid;place-items:center;border-radius:24px;background:radial-gradient(circle at 50% 60%,color-mix(in srgb,var(--purple) 30%,transparent),transparent 65%),var(--bg2);border:1px solid var(--border)}
+.case{width:140px;height:230px;border-radius:14px;border:2px solid var(--blue);background:linear-gradient(160deg,#0b0d14,#171a28);position:relative;box-shadow:0 0 50px color-mix(in srgb,var(--blue) 45%,transparent),0 0 90px color-mix(in srgb,var(--purple) 35%,transparent);animation:glow 4s ease-in-out infinite alternate}
+.case:before{content:"";position:absolute;inset:14px 14px auto;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--purple))}
+.case i{position:absolute;left:50%;width:62px;height:62px;margin-left:-31px;border-radius:50%;border:4px solid var(--purple);box-shadow:inset 0 0 14px var(--purple)}
+.case i:nth-child(1){top:44px}.case i:nth-child(2){top:128px;border-color:var(--blue);box-shadow:inset 0 0 14px var(--blue)}
+@keyframes glow{to{filter:hue-rotate(40deg)}}
+@media(prefers-reduced-motion:reduce){.case{animation:none}html{scroll-behavior:auto}}
+.hl{font-size:.8rem;color:var(--muted);text-align:center;margin-top:8px}
+h2{font-size:1.6rem;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0 0 18px}
+section{padding:34px 0}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px}
+.chip{white-space:nowrap;background:var(--card);border:1px solid var(--border);border-radius:99px;padding:7px 15px;font-size:.9rem}
+.chip.on{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 22%,var(--card))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:9px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--blue)}
+.pic{height:130px;border-radius:12px;background:radial-gradient(circle,color-mix(in srgb,var(--purple) 25%,transparent),var(--bg2));display:grid;place-items:center;font-size:.8rem;color:var(--muted)}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.b{font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--border);border-radius:99px;padding:2px 9px;color:var(--muted)}
+.b.ok{color:var(--ok);border-color:var(--ok)}.b.w{color:var(--warn);border-color:var(--warn)}
+.card h3{margin:0;font-size:1.08rem}
+.sp2{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.88rem;flex:1}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.price{font-size:1.35rem;font-weight:800}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:left}
+.tile:hover{border-color:var(--purple)}
+.note{background:var(--card);border:1px dashed var(--warn);border-radius:14px;padding:14px;color:var(--muted);font-size:.9rem}
+details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 16px;margin-bottom:8px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:8px 0 0}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+td,th{padding:8px;border-bottom:1px solid var(--border);text-align:left}
+.scroll{overflow-x:auto}
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;z-index:30}
+#ov.on{display:block}
+.panel{position:fixed;z-index:31;background:var(--bg);border:1px solid var(--border);display:none;flex-direction:column;padding:18px}
+.panel.on{display:flex}
+#cart{top:0;right:0;bottom:0;width:min(410px,100%);padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+#pd{left:50%;top:50%;transform:translate(-50%,-50%);width:min(620px,94%);max-height:88vh;overflow:auto;border-radius:18px}
+.it{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+input{width:100%;font:inherit;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--fg)}
+footer{border-top:1px solid var(--border);padding:26px 0;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="logo">NEXRIG</div>
+  <nav><a href="#shop">Gaming PCs</a><a href="#parts">Components</a><a href="#why">Why us</a><a href="#faq">FAQ</a></nav>
+  <button class="ib sp" id="theme" aria-label="Toggle light or dark mode">☀︎/☾</button>
+  <button class="ib" id="cb">Cart (<span id="n">0</span>)</button>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <p class="slogan">Built for Performance. Priced for Gamers.</p>
+      <h1>Your next gaming PC <span>starts here.</span></h1>
+      <p>Powerful Gaming PCs. Tested Components. Unbeatable Value.</p>
+      <br>
+      <div class="cta"><a href="#shop"><button class="btn">Shop Gaming PCs</button></a><a href="#build"><button class="btn o">Build Your PC</button></a></div>
+    </div>
+    <div><div class="rig"><div class="case"><i></i><i></i></div></div><div class="hl">Illustration – replace with your own PC photography</div></div>
+  </div>
+
+  <section id="shop">
+    <h2>Gaming PCs</h2>
+    <p class="sub">Shop by budget and condition.</p>
+    <div class="chips" id="bud"></div>
+    <div class="chips" id="cond"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="parts">
+    <h2>Shop PC components</h2>
+    <p class="sub">Graphics cards, processors, motherboards, memory, storage and power supplies.</p>
+    <div class="tiles" id="tiles"></div>
+    <p class="sub" style="margin-top:12px">Component listings appear here as you add them to your inventory.</p>
+  </section>
+
+  <section id="build">
+    <h2>Custom PC builder</h2>
+    <div class="note"><b>Coming in phase 2.</b> The builder needs a verified compatibility database (sockets, RAM type, power draw, case fit). Until it is real, no build will be shown as “validated”. For now, customers can <a href="#" id="quote">request a custom quote</a>.</div>
+  </section>
+
+  <section id="why">
+    <h2>Why choose NEXRIG</h2>
+    <div class="grid">
+      <div class="card"><h3>Honest listings</h3><span class="sub">We show test results only when testing has been done. Otherwise you’ll see “Not Yet Tested”.</span></div>
+      <div class="card"><h3>Clear condition</h3><span class="sub">New, refurbished and used PCs are labeled plainly, with defects disclosed.</span></div>
+      <div class="card"><h3>Real reviews only</h3><span class="sub">Reviews are shown only from verified purchases.</span></div>
+    </div>
+    <p class="sub" style="margin-top:14px"><b>Customer reviews:</b> none yet. Verified reviews will appear after your first orders.</p>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details><summary>Do you sell used PCs?</summary><p>Yes. Every listing states its condition, and used items include a condition report.</p></details>
+    <details><summary>Can I pay on this site yet?</summary><p>Checkout is not connected to a payment processor yet. See the setup notes in the cart.</p></details>
+    <details><summary>Can you build a custom PC?</summary><p>Yes – send a custom quote request and we’ll reply with a price and parts list.</p></details>
+  </section>
+
+  <section>
+    <h2>Newsletter</h2>
+    <div class="note">Signup is disabled until an email service (Mailchimp, Klaviyo, etc.) is connected.</div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 NEXRIG (temporary brand name). Policy pages (shipping, returns, warranty, privacy, terms) must be written before launch. Listings below the fold are <b>sample placeholders</b> – edit the PRODUCTS list.</div></footer>
+
+<div id="ov"></div>
+<div class="panel" id="pd" role="dialog" aria-modal="true"></div>
+<aside class="panel" id="cart" aria-label="Cart">
+  <div class="row"><b style="font-size:1.1rem">Your cart</b><button class="ib" id="cx">Close</button></div>
+  <div id="items" style="flex:1;overflow:auto;margin:10px 0"></div>
+  <div class="row" style="margin-bottom:10px"><span>Subtotal</span><span class="price" id="tot">$0</span></div>
+  <button class="btn" id="co" disabled>Checkout</button>
+  <div class="note" id="setup" style="display:none;margin-top:10px">
+    <b>Payments not configured.</b> To accept real payments, connect Stripe Checkout (or another processor) – card details are handled by the processor, never by this page. Until then, you can send an order request for manual invoicing.
+    <input id="em" type="email" placeholder="Your email" style="margin:10px 0">
+    <button class="btn o" id="req" style="width:100%">Send order request</button>
+  </div>
+</aside>
+
+<script>
+var SELLER_EMAIL="sales@example.com"; // change me
+// SAMPLE placeholders. tested:true only after real testing; fps stays null until measured.
+var PRODUCTS=[
+ {id:1,name:"Sample Gaming PC A",price:899,cond:"New",stock:3,tested:false,fps:null,specs:["CPU: replace me","GPU: replace me","RAM: 16 GB","Storage: 1 TB SSD"]},
+ {id:2,name:"Sample Refurbished PC B",price:549,cond:"Refurbished",stock:1,tested:false,fps:null,specs:["CPU: replace me","GPU: replace me","RAM: 16 GB","Storage: 512 GB SSD"]},
+ {id:3,name:"Sample High-End PC C",price:1799,cond:"New",stock:0,tested:false,fps:null,specs:["CPU: replace me","GPU: replace me","RAM: 32 GB","Storage: 2 TB SSD"]}
+];
+var BUDS=[["All",0,1e9],["Under $500",0,500],["$500–$800",500,800],["$800–$1,200",800,1200],["$1,200–$2,000",1200,2000],["$2,000+",2000,1e9]];
+var CONDS=["All conditions","New","Refurbished","Used"];
+var GAMES=["Call of Duty: Warzone","Fortnite","GTA V","Valorant","Counter-Strike 2","Apex Legends","Minecraft"];
+var PARTS=["Graphics cards","Processors","Motherboards","Memory (RAM)","SSDs","Power supplies","Accessories"];
+var bi=0,ci=0,cart={};
+try{cart=JSON.parse(localStorage.getItem("nx-cart")||"{}")}catch(e){}
+var $=function(i){return document.getElementById(i)},m=function(n){return "$"+n.toLocaleString("en-US")};
+function chips(el,list,cur,k){$(el).innerHTML=list.map(function(x,i){return '<button class="chip'+(i===cur?' on':'')+'" data-'+k+'="'+i+'">'+(x[0]||x)+'</button>'}).join("")}
+function grid(){
+ var b=BUDS[bi],c=CONDS[ci];chips("bud",BUDS,bi,"b");chips("cond",CONDS,ci,"c");
+ var l=PRODUCTS.filter(function(p){return p.price>=b[1]&&p.price<b[2]&&(ci===0||p.cond===c)});
+ $("grid").innerHTML=l.length?l.map(function(p){return '<article class="card"><div class="pic">Photo coming soon</div><div class="badges"><span class="b">'+p.cond+'</span><span class="b '+(p.stock?'ok':'w')+'">'+(p.stock?p.stock+' in stock':'Out of stock')+'</span><span class="b">Sample</span></div><h3>'+p.name+'</h3><ul class="sp2">'+p.specs.map(function(s){return '<li>'+s+'</li>'}).join("")+'</ul><div class="row"><span class="price">'+m(p.price)+'</span><span><button class="ib" data-v="'+p.id+'">Details</button> <button class="btn" data-a="'+p.id+'"'+(p.stock?'':' disabled')+'>Add</button></span></div></article>'}).join(""):'<p class="sub">No PCs match these filters yet.</p>';
+}
+function detail(id){
+ var p=PRODUCTS.find(function(x){return x.id===id});
+ $("pd").innerHTML='<div class="row"><h2 style="margin:0">'+p.name+'</h2><button class="ib" data-x="1">Close</button></div><p class="sub">'+p.cond+' · '+(p.stock?p.stock+' in stock':'Out of stock')+' · <b>'+m(p.price)+'</b></p><h3>Specifications</h3><ul class="sp2">'+p.specs.map(function(s){return '<li>'+s+'</li>'}).join("")+'</ul>'+
+ '<h3>Testing</h3><p class="sub">'+(p.tested?'<span class="b ok">Tested &amp; Verified</span>':'<span class="b w">Not yet tested</span> – the “Tested &amp; Verified” badge appears only after a completed test report is uploaded.')+'</p>'+
+ '<h3>How will it game?</h3><div class="scroll"><table><tr><th>Game</th><th>1080p</th><th>1440p</th><th>4K</th></tr>'+GAMES.map(function(g){var f=p.fps&&p.fps[g]||{};return '<tr><td>'+g+'</td>'+["1080p","1440p","4K"].map(function(r){return '<td>'+(f[r]?f[r]+' FPS (measured)':'Not Yet Tested')+'</td>'}).join("")+'</tr>'}).join("")+'</table></div>'+
+ '<h3>Warranty, shipping &amp; returns</h3><p class="sub">Add your real policy terms before launch.</p><button class="btn" data-a="'+p.id+'"'+(p.stock?'':' disabled')+'>Add to cart</button>';
+ $("pd").classList.add("on");$("ov").classList.add("on");
+}
+function rc(){
+ var ids=Object.keys(cart).filter(function(k){return cart[k]>0}),t=0,n=0;
+ $("items").innerHTML=ids.length?ids.map(function(k){var p=PRODUCTS.find(function(x){return x.id==k});t+=p.price*cart[k];n+=cart[k];return '<div class="it"><div><b>'+p.name+'</b><br><button class="ib" data-d="'+k+'">−</button> '+cart[k]+' <button class="ib" data-a="'+k+'">+</button></div><b>'+m(p.price*cart[k])+'</b></div>'}).join(""):'<p class="sub">Your cart is empty.</p>';
+ $("tot").textContent=m(t);$("n").textContent=n;$("co").disabled=!n;if(!n)$("setup").style.display="none";
+ try{localStorage.setItem("nx-cart",JSON.stringify(cart))}catch(e){}
+}
+function show(id,on){$(id).classList.toggle("on",on);$("ov").classList.toggle("on",on)}
+function closeAll(){$("cart").classList.remove("on");$("pd").classList.remove("on");$("ov").classList.remove("on")}
+document.addEventListener("click",function(e){var d=e.target.dataset;
+ if(d.b!==undefined){bi=+d.b;grid()}if(d.c!==undefined){ci=+d.c;grid()}
+ if(d.v)detail(+d.v);if(d.x)closeAll();
+ if(d.a){var p=PRODUCTS.find(function(x){return x.id==d.a});if((cart[d.a]||0)<p.stock){cart[d.a]=(cart[d.a]||0)+1;rc()}}
+ if(d.d){cart[d.d]=Math.max(0,cart[d.d]-1);rc()}
+ if(d.p){location.hash="shop"}
+});
+$("tiles").innerHTML=PARTS.map(function(x){return '<button class="tile" data-p="1"><b>'+x+'</b></button>'}).join("");
+$("cb").onclick=function(){closeAll();show("cart",true)};$("cx").onclick=$("ov").onclick=closeAll;
+$("co").onclick=function(){$("setup").style.display="block"};
+$("req").onclick=function(){var em=$("em").value.trim();if(!em){alert("Please enter your email.");return}
+ var l=Object.keys(cart).filter(function(k){return cart[k]>0}).map(function(k){var p=PRODUCTS.find(function(x){return x.id==k});return cart[k]+" x "+p.name+" – "+m(p.price*cart[k])});
+ location.href="mailto:"+SELLER_EMAIL+"?subject="+encodeURIComponent("Order request")+"&body="+encodeURIComponent(l.join("\n")+"\nTotal: "+$("tot").textContent+"\nContact: "+em)};
+$("quote").onclick=function(e){e.preventDefault();location.href="mailto:"+SELLER_EMAIL+"?subject="+encodeURIComponent("Custom PC quote request")};
+$("theme").onclick=function(){var r=document.documentElement;r.setAttribute("data-theme",r.getAttribute("data-theme")==="light"?"dark":"light")};
+grid();rc();
+</script>
+</body>
+</html>
